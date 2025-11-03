@@ -10,7 +10,7 @@ import CartCon from './pages/CartContext.tsx'
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <CartCon>
-    <BrowserRouter>
+    <BrowserRouter basename="/react">
       <App />
     </BrowserRouter>
     </CartCon>
