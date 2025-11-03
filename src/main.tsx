@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.scss";
 import App from "./App.tsx";
 
@@ -10,9 +10,9 @@ import CartCon from './pages/CartContext.tsx'
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <CartCon>
-    <HashRouter basename="/react">
+    <BrowserRouter basename="/react">
       <App />
-    </HashRouter>
+    </BrowserRouter>
     </CartCon>
   </StrictMode>
 );
