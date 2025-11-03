@@ -15,7 +15,7 @@ const Products: React.FC = () => {
     useEffect(() => {
         const load = async () => {
             try {
-                const { data } = await axios.get<Product[]>('react/products.json'); //data라는 객체 속성을 await로 받음.
+                const { data } = await axios.get<Product[]>('products.json'); //data라는 객체 속성을 await로 받음.
                 setList(data);
             } catch (err) {
                 setError('상품목록을 불러오지 못했습니다.');
