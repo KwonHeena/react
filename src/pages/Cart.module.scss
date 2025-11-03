@@ -1,0 +1,54 @@
+@use '../assets/scss/var' as v;
+@use '../assets/scss/mixin' as m;
+@use 'sass:color';
+
+.cart {
+  .cart_inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding-left: 0;
+
+    li {
+      @include m.card;
+      text-align: center;
+    }
+  }
+
+  .total_box {
+    margin-top: 50px;
+    text-align: right;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 16px;
+  }
+
+  button {
+    min-width: 40px;
+    margin-bottom: 25px;
+    border: none;
+    background-color: #1a66d1;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: color.adjust(#1a66d1, $lightness : 5%);
+    }
+  }
+  .btn{
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,29 @@
+.contact{
+  margin: 0 auto;
+  max-width: 1400px;
+  .ul{
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    .fl{
+      border: 1px solid rgb(219, 0, 50);
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      max-width: 250px;
+      flex: 1;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(219, 0, 50);
+      font-weight: 600;
+      p{
+        width: 100%;
+        margin: 0;
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

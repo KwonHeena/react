@@ -1,0 +1,70 @@
+@use "../assets/scss/var" as v;
+@use "../assets/scss/mixin" as m;
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  // backdrop-filter: saturate(180%) blur(15px); // 뒷배경 채도를 증가하고,배경을 흐리게
+
+  .header_inner{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+  }
+  .logo {
+    font-weight: bold;
+    font-size: clamp(
+      16px,
+      2.5vw,
+      25px
+    ); //clamp(최소값, 선호값, 최대값), 반응형 할 때 많이 쓰임
+    letter-spacing: 0.2px;
+    color: v.$text-dark;
+    padding: 5px;
+    @include m.respond(v.$bp-md) {
+    }
+  }
+
+  .menuList {
+    @include m.flex-center;
+    gap: v.$gap;
+    @include m.respond(v.$bp-md) {
+      margin-right: 30px;
+    }
+
+    a {
+      position: relative;
+      padding: 6px 10px;
+      font-weight: 700;
+      color: v.$text-dark;
+      transition: all 0.3s linear;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        transform: translateY(-1px);
+      }
+    }
+    .active {
+      color: v.$sub-color;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 1px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: v.$sub-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use "../assets/scss/var" as v;
+@use "../assets/scss/mixin" as m;
+@use "sass:color";
+
+.product{
+    width: calc(100% - 40px);
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .gridBox{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 25px;
+
+        .box{
+          height: 100%;
+          max-height: 200px;
+          overflow: hidden;
+        }
+         img:nth-child(4) {
+            grid-column: 2;
+            }
+       
+        .card{
+            @include m.card;
+            border: 1px solid #ddd;
+            text-align: center;
+            .imgs{
+                width: 100%;
+                object-fit: cover;
+                // border-radius: 10px;
+               
+            }
+            span{
+              display: inline-block;
+              margin: 0 15px;
+              font-size: 16px;
+            }
+            button{
+              min-width: 40px;
+              margin-bottom: 25px;
+              border: none;
+              background-color: #1a66d1;
+              color: #fff;
+              padding: 10px;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: 0.3s;
+
+              &:hover{
+                background-color: color.adjust(#1a66d1, $lightness : 5%);
+              }
+            } 
+        }
+    }
+}
