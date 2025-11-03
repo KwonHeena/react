@@ -2,6 +2,9 @@
 @use "../assets/scss/mixin" as m;
 @use "sass:color";
 .weather{
+  h2{
+    margin: 0;
+  }
   .info{
     margin: 0 auto;
     text-align: center;
