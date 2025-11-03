@@ -3,7 +3,7 @@ import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   let menus = [
-    { name: "홈", path: "/" },
+    { name: "홈", path: "/home" },
     { name: "날씨", path: "/weather" },
     { name: "상품소개", path: "/products" },
     { name: "장바구니", path: "/cart" },
